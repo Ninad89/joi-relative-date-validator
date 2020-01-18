@@ -1,0 +1,24 @@
+{
+  "name": "joi-relative-date-validator",
+  "version": "1.0.0",
+  "description": "Relative date validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "tslint":"tslint src/**/*.ts"
+  },
+  "author": "Ninad Mahajan",
+  "license": "MIT",
+  "devDependencies": {
+    "@hapi/joi": "^17.0.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "peerDependencies": {
+    "@hapi/joi": "^17.0.2"
+  }
+}
