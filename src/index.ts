@@ -44,4 +44,3 @@ const schema = Joi.object({
     dueDate: custom.relativeDate().before(7),
 });
 const x = schema.validate({ dueDate: '2020-02-04' });
-console.log(x.error);
