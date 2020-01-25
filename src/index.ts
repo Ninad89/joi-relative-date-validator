@@ -81,4 +81,3 @@ const schema = Joi.object({
     dueDate: custom.relativeDate().before('a'),
 });
 const x = schema.validate({ dueDate: '2019-01-01' });
-console.log(x);
