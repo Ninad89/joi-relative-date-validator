@@ -38,7 +38,7 @@ describe('Should do nothing', () => {
         const result = schema.validate(
             moment()
                 .subtract(3, 'd')
-                .toDate()
+                .toDate(),
         );
         expect(result.error).toBeUndefined();
     });
@@ -49,7 +49,7 @@ describe('Should do nothing', () => {
         const result = schema.validate(
             moment()
                 .add(3, 'd')
-                .toDate()
+                .toDate(),
         );
         expect(result.error).toBeUndefined();
     });
