@@ -39,14 +39,13 @@ export default function relativeDateValidator(relativeTo: Date | string = 'today
         type: 'relativeDate',
         base: Joi.date(),
         messages: {
-            'relateiveDate.before': 'date must be before {{#value}} {{#unit}} from {{#from}}',
+            'relateiveDate.within': 'date must be within {{#value}} {{#unit}} from {{#from}}',
             'relateiveDate.after': 'date must be after {{#value}} {{#unit}} from {{#from}}',
         },
         rules: {
-            before: {
-                alias: 'lessThan',
+            within: {
                 method(value, unit) {
-                    return this.$_addRule({ name: 'before', args: { value, unit } });
+                    return this.$_addRule({ name: 'within', args: { value, unit } });
                 },
                 args: [
                     {
@@ -62,10 +61,10 @@ export default function relativeDateValidator(relativeTo: Date | string = 'today
                     },
                 ],
                 validate(value, helpers, args, options) {
-                    const mustBeBefore = getRelativeToDate().add(args.value, args.unit);
+                    const mustBeBeforeThan = getRelativeToDate().add(args.value, args.unit);
                     const toValidate = moment(value);
-                    if (!toValidate.isBefore(mustBeBefore)) {
-                        return helpers.error('relateiveDate.before', {
+                    if (!toValidate.isBefore(mustBeBeforeThan)) {
+                        return helpers.error('relateiveDate.within', {
                             value: args.value,
                             unit: moment.normalizeUnits(args.unit),
                             from: getRelativeToDate().format('DD-MM-YYYY'),
@@ -92,10 +91,11 @@ export default function relativeDateValidator(relativeTo: Date | string = 'today
                     },
                 ],
                 validate(value, helpers, args, options) {
-                    const mustBeAfterThan = getRelativeToDate().add(args.days, 'days');
+                    const mustBeAfterThan = getRelativeToDate().add(args.value, args.unit);
                     const toValidate = moment(value);
+
                     if (!toValidate.isAfter(mustBeAfterThan)) {
-                        return helpers.error('relateiveDate.before', {
+                        return helpers.error('relateiveDate.after', {
                             days: args.days,
                             from: getRelativeToDate().format('DD-MM-YYYY'),
                         });
@@ -109,7 +109,8 @@ export default function relativeDateValidator(relativeTo: Date | string = 'today
         if (relativeTo === 'today') {
             return moment();
         } else {
-            return moment(relativeTo);
+            const dt = moment(relativeTo);
+            return dt;
         }
     }
 
@@ -117,12 +118,3 @@ export default function relativeDateValidator(relativeTo: Date | string = 'today
         return VALID_MOMENT_UNIT.includes(unit);
     }
 }
-
-const custom = Joi.extend(relativeDateValidator());
-
-const schema = Joi.object({
-    dueDate: custom.relativeDate().before(2, 'y'),
-});
-const x = schema.validate({ dueDate: '2018-01-01' });
-
-// console.log(x);

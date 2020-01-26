@@ -3,7 +3,7 @@
 
 module.exports = {
     clearMocks: true,    
-    collectCoverage :true,
+    collectCoverage :true,    
     //coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
     collectCoverageFrom:[
       'src/**/*.ts'

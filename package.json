@@ -4,9 +4,10 @@
   "description": "Relative date validation",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "build": "tsc",
-    "tslint": "tslint src/**/*.ts"
+    "tslint": "tslint src/**/*.ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Ninad Mahajan",
   "license": "MIT",
