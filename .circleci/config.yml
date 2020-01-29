@@ -28,6 +28,9 @@ jobs:
 
       - run: npm install
 
+      # install peer dependecy
+      - run: npm install @hapi/joi
+
       - save_cache:
           paths:
             - node_modules
