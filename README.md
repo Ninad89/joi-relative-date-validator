@@ -22,12 +22,10 @@ import relativeDateValidator from 'joi-relative-date-validator'
 ### 3. Extend Joi
 ```
 const custom = Joi.extend(relativeDateValidator());
-<<<<<<< Updated upstream
 const schema: Schema = custom.relativeDate().within(2, 'd');
 ```
 
-=======
-```
+
 ### 4. Generate Schema
 ```
 const schema: Schema = custom.relativeDate().within(2, 'd');
@@ -37,5 +35,8 @@ const schema: Schema = custom.relativeDate().within(2, 'd');
 ```
 schema.validate('2018-10-31');
 ```
->>>>>>> Stashed changes
+> More examples in src/index.test.ts file.
 
+### Things useful to note
+- Joi.Date is base type of this validator.
+- Internally it uses Moment.js, so you can pass any moment parsable date to validator function
