@@ -22,7 +22,20 @@ import relativeDateValidator from 'joi-relative-date-validator'
 ### 3. Extend Joi
 ```
 const custom = Joi.extend(relativeDateValidator());
+<<<<<<< Updated upstream
 const schema: Schema = custom.relativeDate().within(2, 'd');
 ```
 
+=======
+```
+### 4. Generate Schema
+```
+const schema: Schema = custom.relativeDate().within(2, 'd');
+```
+
+### 5. And finally validate 
+```
+schema.validate('2018-10-31');
+```
+>>>>>>> Stashed changes
 

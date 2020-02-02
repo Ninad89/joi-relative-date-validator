@@ -1,14 +1,14 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-        "target": "es6",
+        "target": "es2016",
         "module": "commonjs",
         "esModuleInterop": true,
         "sourceMap": true,
         "moduleResolution": "node",
-        "outDir": "dist",
+        "outDir": "built",
         "typeRoots": ["node_modules/@types"]
     },
-    "include": ["typings.d.ts", "server/**/*.ts"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules"]
 }
