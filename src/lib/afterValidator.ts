@@ -1,8 +1,8 @@
-import moment from "moment";
-import getRelativeToDate from "./utils/getRelativeToDate";
-import isValidUnit from "./utils/isValidUnit";
+import moment from 'moment';
+import getRelativeToDate from './utils/getRelativeToDate';
+import isValidUnit from './utils/isValidUnit';
 
-function getAfterValidator(relativeTo){
+function getAfterValidator(relativeTo) {
     return {
         alias: 'greaterThan',
         method(value, unit) {
@@ -32,7 +32,7 @@ function getAfterValidator(relativeTo){
                 });
             }
         },
-    }
+    };
 }
 
 export default getAfterValidator;

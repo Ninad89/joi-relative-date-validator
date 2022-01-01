@@ -1,6 +1,6 @@
-import moment from "moment";
-import getRelativeToDate from "./utils/getRelativeToDate";
-import isValidUnit from "./utils/isValidUnit";
+import moment from 'moment';
+import getRelativeToDate from './utils/getRelativeToDate';
+import isValidUnit from './utils/isValidUnit';
 
 function getWithinValidator(relativeTo) {
     return {
@@ -30,8 +30,8 @@ function getWithinValidator(relativeTo) {
                     from: getRelativeToDate(relativeTo).format('DD-MM-YYYY'),
                 });
             }
-        }
-    }
+        },
+    };
 }
 
 export default getWithinValidator;
