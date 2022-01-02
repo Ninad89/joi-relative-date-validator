@@ -4,7 +4,7 @@
         "target": "es2016",
         "module": "commonjs",
         "esModuleInterop": true,
-        "sourceMap": true,
+        "sourceMap": false,
         "moduleResolution": "node",
         "outDir": "built",
         "typeRoots": ["node_modules/@types"]

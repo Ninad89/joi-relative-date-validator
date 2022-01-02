@@ -1,5 +1,8 @@
 # Joi Relative Date Validator
 
+[![CircleCI](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master.svg?style=shield)](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master)
+
+
 ## Install
 
 ```
