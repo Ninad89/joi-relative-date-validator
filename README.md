@@ -1,7 +1,7 @@
 # Joi Relative Date Validator
 
 [![CircleCI](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master.svg?style=shield)](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master)
-
+[![NPM](https://nodei.co/npm/joi-relative-date-validator.png?compact=true)](https://nodei.co/npm/joi-relative-date-validator/)
 
 ## Install
 
@@ -37,6 +37,11 @@ const schema: Schema = custom.relativeDate().within(2, 'd');
 5. And finally validate 
 ```
 schema.validate('2018-10-31');
+
+schema.validate(new Date(2018-10-31T00:00:00));
+
+schema.validate(moment());
+
 ```
 > More examples in src/index.test.ts file.
 
