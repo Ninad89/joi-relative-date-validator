@@ -1,4 +1,4 @@
-import Joi, { Schema } from '@hapi/joi';
+import Joi, { Schema } from 'joi';
 import moment from 'moment';
 import relativeDateValidator from './index';
 

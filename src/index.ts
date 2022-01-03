@@ -1,5 +1,4 @@
-import Joi from '@hapi/joi';
-import { Extension } from '@hapi/joi';
+import Joi,{ Extension } from 'joi';
 import moment from 'moment';
 import getAfterValidator from './lib/afterValidator';
 import getWithinValidator from './lib/withinValidator';
