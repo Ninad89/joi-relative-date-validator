@@ -1,14 +1,15 @@
 {
   "name": "joi-relative-date-validator",
-  "version": "1.0.0",
-  "description": "Relative date validation",
+  "version": "1.0.1",
+  "description": "Joi extension for relative date validation",
   "main": "built/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf built && tsc",
     "tslint": "tslint src/**/*.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prepublishOnly": "npm run tslint && npm test && npm run build"
   },
   "author": "Ninad Mahajan",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.4",
     "jest": "^27.4.5",
+    "rimraf": "^3.0.2",
     "tslint": "^5.20.1",
     "typescript": "^3.7.5"
   },
@@ -40,5 +42,18 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ninad89/joi-relative-date-validator"
+  },
+  "homepage": "https://github.com/Ninad89/joi-relative-date-validator",
+  "keywords": [
+    "joi",
+    "date",
+    "relative date",
+    "validation",
+    "api",
+    "express"
+  ]
 }
