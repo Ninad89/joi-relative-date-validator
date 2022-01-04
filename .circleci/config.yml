@@ -30,7 +30,7 @@ jobs:
       - run: npm install
 
       # install peer dependecy
-      - run: npm install @hapi/joi
+      - run: npm install joi
 
       - save_cache:
           paths:
