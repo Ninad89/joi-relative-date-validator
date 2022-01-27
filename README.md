@@ -1,7 +1,8 @@
 # Joi Relative Date Validator
 
-[![CircleCI](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master.svg?style=shield)](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master)
 [![NPM](https://nodei.co/npm/joi-relative-date-validator.png?compact=true)](https://nodei.co/npm/joi-relative-date-validator/)
+
+[![CircleCI](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master.svg?style=shield)](https://circleci.com/gh/Ninad89/joi-relative-date-validator/tree/master)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNinad89%2Fjoi-relative-date-validator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNinad89%2Fjoi-relative-date-validator?ref=badge_shield)
 
 ## Install
